@@ -3,13 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Happy Birthday Priyu ❤️</title>
 
 <link rel="stylesheet" href="style.css">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
 
@@ -17,189 +13,97 @@
 
 <body>
 
-<!-- Loading Screen -->
-
-<div id="loading">
-
-<div class="loader-heart">❤️</div>
-
-<h1>Preparing Something Special...</h1>
-
-<p>Just For Priyu 💖</p>
-
+<div id="loader">
+<h1>Loading Your Surprise ❤️</h1>
 </div>
 
-<!-- Floating Hearts -->
+<div id="hearts"></div>
 
-<div class="hearts"></div>
+<section id="page1" class="page active">
 
-<!-- Floating Balloons -->
-
-<div class="balloons">
-
-<div class="balloon b1"></div>
-<div class="balloon b2"></div>
-<div class="balloon b3"></div>
-<div class="balloon b4"></div>
-<div class="balloon b5"></div>
-
-</div>
-
-<!-- Welcome Page -->
-
-<section id="welcome" class="page active">
-
-<div class="glass">
+<div class="card">
 
 <h1 class="title">
-
 Happy Birthday
-
 </h1>
 
 <h2 class="name">
-
 Priyu ❤️
-
 </h2>
 
 <p>
-
-Aaj tumhare liye maine ek chhota sa surprise banaya hai...
-
-Ye sirf website nahi,
-
-mere dil ki kuch baatein hain.
-
+Aaj maine tumhare liye ek chhota sa surprise banaya hai.
+Ye sirf website nahi...
+Mere dil ki baatein hain.
 </p>
 
 <button id="startBtn">
-
-Open My Surprise ✨
-
+Open Surprise 🎁
 </button>
 
 </div>
 
 </section>
 
-<!-- Gift Page -->
+<section id="page2" class="page">
 
-<section id="giftPage" class="page">
+<div class="card">
 
-<div class="glass">
+<h1>🎁 Gift For You</h1>
 
-<h2>
+<div id="gift">
 
-🎁
+<div class="gift-top"></div>
 
-</h2>
-
-<h1>
-
-Tap The Gift
-
-</h1>
-
-<p>
-
-Ek chhota sa surprise tumhara wait kar raha hai...
-
-</p>
-
-<div id="giftBox">
-
-<div class="lid"></div>
-
-<div class="box"></div>
-
-<div class="ribbon"></div>
+<div class="gift-box"></div>
 
 </div>
+
+<p>Tap the Gift ❤️</p>
 
 </div>
 
 </section>
 
-<!-- Cake Page -->
+<section id="page3" class="page">
 
-<section id="cakePage" class="page">
+<div class="card">
 
-<div class="glass">
-
-<h1>
-
-Happy Birthday My Princess ❤️
-
-</h1>
-
-<p>
-
-Make A Wish...
-
-</p>
+<h1>🎂 Happy Birthday</h1>
 
 <div class="cake">
 
-<div class="layer layer1"></div>
+<div class="layer bottom"></div>
+<div class="layer middle"></div>
+<div class="layer top"></div>
 
-<div class="layer layer2"></div>
+<div class="candles">
 
-<div class="layer layer3"></div>
-
-<div class="cream"></div>
-
-<div class="candles"><div class="candle">
-<div class="flame"></div>
-</div>
-
-<div class="candle">
-<div class="flame"></div>
-</div>
-
-<div class="candle">
-<div class="flame"></div>
-</div>
-
-<div class="candle">
-<div class="flame"></div>
-</div>
-
-<div class="candle">
-<div class="flame"></div>
-</div>
+<div class="candle"><div class="flame"></div></div>
+<div class="candle"><div class="flame"></div></div>
+<div class="candle"><div class="flame"></div></div>
+<div class="candle"><div class="flame"></div></div>
+<div class="candle"><div class="flame"></div></div>
 
 </div>
 
 </div>
-
-<p id="wishText">
-
-Close your eyes...
-Make a wish...
-Then blow the candles ❤️
-
-</p>
 
 <button id="blowBtn">
-
 💨 Blow Candles
-
 </button>
+<div id="celebration" style="display:none;">
 
-<div id="celebrate">
-
-<h2>
-
-🎉 Happy Birthday Priyu ❤️
-
-</h2>
+<h2>🎉 Happy Birthday My Princess ❤️</h2>
 
 <p>
-
-May Allah bless you with happiness, love and endless smiles.
-
+May Allah always keep you smiling,
+protect you and bless you with endless happiness.
 </p>
+
+<button id="letterBtn">
+Read My Letter 💌
+</button>
 
 </div>
 
@@ -207,81 +111,61 @@ May Allah bless you with happiness, love and endless smiles.
 
 </section>
 
-<!-- Letter Page -->
+<section id="page4" class="page">
 
-<section id="letterPage" class="page">
+<div class="letter">
 
-<div class="book">
-
-<div class="paper">
-
-<h1>
-
-💌 My Letter For You
-
-</h1>
+<h1>💌 My Letter</h1>
 
 <div id="letterText">
 
-</div>
-
-</div>
-
-</div>
-
-<button<!-- Love Popup -->
-
-<div id="lovePopup" class="popup">
-
-<div class="popup-content">
-
-<h1>❤️</h1>
-
-<h2>
-
-I Love You So Much Priyu
-
-</h2>
-
 <p>
 
-Jab tum meri life me aayi thi na...
+Happy Birthday Priyu ❤️
 
-Tab mujhe bilkul bhi nahi laga tha ki ek din tum meri duniya ban jaogi.
+Jab maine tumhe pehli baar dekha tha,
+tab mujhe laga tha tum thodi si pagal ho. 😅
+
+Lekin maine kabhi nahi socha tha
+ki ek din tum meri zindagi ki
+sabse important person ban jaogi.
 
 Aaj tum meri smile ho,
-meri dua ho,
 mera sukoon ho,
-aur mera poora jahan ho.
+meri dua ho,
+aur meri poori duniya ho.
 
-Main Allah se hamesha dua karta hoon ki tum hamesha khush raho.
+Tumhare saath bitaya hua har pal
+meri zindagi ka sabse khoobsurat hissa hai.
+
+Main Allah se dua karta hoon
+ki tum hamesha khush raho,
+muskuraati raho,
+aur tumhare har sapne poore hon.
 
 Happy Birthday My Princess ❤️
 
+I Love You Forever.
+
+— Mohd Suhail ❤️
+
 </p>
 
-<button id="closePopup">
+</div>
 
-Close ❤️
-
+<button id="finalBtn">
+One Last Surprise ❤️
 </button>
 
 </div>
 
-</div>
+</section>
 
-<!-- Confetti -->
+<section id="page5" class="page">
 
-<div id="confetti"></div>
+<div class="card">
 
-<!-- Rose Petals -->
-
-<div id="petals"></div>
-
-<!-- Floating Stars -->
-
-<div id="stars"></div>
-
+<h1>❤️ Forever Together ❤️</
+  <script src="script.js"></script>
 </body>
-
 </html>
