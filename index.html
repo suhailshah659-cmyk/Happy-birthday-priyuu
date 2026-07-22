@@ -1,98 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Happy Birthday Priyu ❤️</title>
-<style>
-body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(135deg,#ff9ecf,#ffd6e8);overflow:hidden;color:#fff}
-.screen{display:none;min-height:100vh;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:20px}
-.active{display:flex}
-h1,h2{margin:10px}
-button{padding:14px 28px;border:none;border-radius:30px;background:#fff;color:#e91e63;font-size:18px;font-weight:bold;cursor:pointer}
-.hearts span{position:fixed;bottom:-40px;font-size:24px;animation:up 8s linear infinite;opacity:.8}
-@keyframes up{from{transform:translateY(0)}to{transform:translateY(-120vh)}}
-.cake{font-size:110px}
-#letter{max-width:700px;background:rgba(255,255,255,.15);padding:20px;border-radius:20px;line-height:1.7}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Priyu ❤️</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<div class="hearts" id="hearts"></div>
+<div class="hearts"></div>
 
-<section class="screen active" id="s1">
-<h1>💖 A Special Surprise For Priyu 💖</h1>
-<p>Hey Priyu... aaj tumhare liye dil se ek chhota sa surprise banaya hai. ❤️</p>
-<button onclick="show('s2')">Open My Surprise ✨</button>
+<section id="welcome" class="page active">
+
+<div class="glass">
+
+<h1>For My Princess ❤️</h1>
+
+<h2>Priyu</h2>
+
+<p>
+
+Someone made something special just for you...
+
+</p>
+
+<button id="startBtn">
+
+Open My Surprise ✨
+
+</button>
+
+</div>
+
 </section>
 
-<section class="screen" id="s2">
-<h1>🎉 Happy Birthday Priyu 🎉</h1>
-<div class="cake">🎂</div>
-<p>Ek wish maango aur button dabao. 🕯️</p>
-<button onclick="blow()">💨 Blow Candles</button>
+<section id="gift" class="page">
+
+<div class="glass">
+
+<h2>🎁</h2>
+
+<h1>Tap The Gift</h1>
+
+<div id="giftBox">
+
+🎁
+
+</div>
+
+</div>
+
 </section>
 
-<section class="screen" id="s3">
-<h2>💌 A Letter Just For You</h2>
-<div id="letter"></div>
+<section id="cakePage" class="page">
+
+<div class="glass">
+
+<h1>Happy Birthday ❤️</h1>
+
+<div class="cake">
+
+<div class="candle">
+
+<div class="flame"></div>
+
+</div>
+
+</div>
+
+<p id="wishText">
+
+Make a wish...
+
+</p>
+
+<button id="blowBtn">
+
+💨 Blow Candles
+
+</button>
+
+</div>
+
+</section>
+
+<section id="letterPage" class="page">
+
+<div class="letter">
+
+<h1>
+
+💌
+
+</h1>
+
+<div id="letterText">
+
+</div>
+
+</div>
+
+<button id="nextBtn">
+
+Continue ❤️
+
+</button>
+
+</section>
+
+<section id="endPage" class="page">
+
+<div class="glass">
+
+<h1>
+
+Happy Birthday Priyu ❤️
+
+</h1>
+
+<h2>
+
+Forever Yours,
+
 <br>
-<button onclick="show('s4')">Continue ❤️</button>
+
+Mohd Suhail
+
+</h2>
+
+<p>
+
+No matter what happens...
+
+You'll always be my favourite person.
+
+❤️
+
+</p>
+
+</div>
+
 </section>
 
-<section class="screen" id="s4">
-<h1>❤️ Happy Birthday, My Princess ❤️</h1>
-<h2>Forever Yours,<br>Mohd Suhail 💖</h2>
-<p>No matter what happens... You'll always be my favourite person. 🌹</p>
-</section>
+<script src="script.js"></script>
 
-<script>
-function show(id){
-document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
-document.getElementById(id).classList.add('active');
-if(id==="s3") typeLetter();
-}
-function blow(){
-alert("🎉 Candles Blown! Happy Birthday Priyu! ❤️");
-show('s3');
-}
-const msg=`Meri Pyari Priyu,
-
-Happy Birthday Meri Jaan! ❤️
-
-Jab tum meri life mein aayi thi na, tab tum mujhe thodi si pagal, shararti aur alag si lagi thi. Mujhe bilkul bhi nahi laga tha ki ek din tum meri duniya ban jaogi.
-
-Dheere-dheere tum meri aadat bani, phir meri khushi, phir mera sukoon... aur aaj tum mera poora jahan ho.
-
-Main Allah se hamesha dua karta hoon ki tum hamesha khush raho, sehatmand raho aur tumhari har khwahish poori ho.
-
-Thank you meri life mein aane ke liye. Thank you mujhe samajhne ke liye, meri bakwaas sunne ke liye aur meri zindagi ko itna khoobsurat banane ke liye.
-
-Main perfect nahi hoon, lekin meri mohabbat tumhare liye hamesha sacchi rahegi.
-
-I Love You So Much, Priyu. ❤️
-
-Happy Birthday My Princess! 👑`;
-let done=false;
-function typeLetter(){
-if(done) return;
-done=true;
-let i=0;
-let box=document.getElementById("letter");
-let t=setInterval(()=>{
-box.innerHTML=msg.substring(0,i).replace(/\n/g,"<br>");
-i++;
-if(i>msg.length) clearInterval(t);
-},25);
-}
-for(let i=0;i<30;i++){
-let s=document.createElement("span");
-s.innerHTML="💖";
-s.style.left=Math.random()*100+"vw";
-s.style.animationDelay=(Math.random()*8)+"s";
-s.style.fontSize=(18+Math.random()*18)+"px";
-document.getElementById("hearts").appendChild(s);
-}
-</script>
 </body>
+
 </html>
