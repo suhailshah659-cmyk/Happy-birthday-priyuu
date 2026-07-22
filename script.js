@@ -1,136 +1,88 @@
-const pages = document.querySelectorAll(".page");
-
-function showPage(id) {
-    pages.forEach(page => page.classList.remove("active"));
-    document.getElementById(id).classList.add("active");
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-const startBtn = document.getElementById("startBtn");
-const giftBox = document.getElementById("giftBox");
-const blowBtn = document.getElementById("blowBtn");
-const nextBtn = document.getElementById("nextBtn");
-
-if (startBtn) {
-    startBtn.onclick = () => showPage("gift");
+html{
+scroll-behavior:smooth;
 }
 
-if (giftBox) {
-    giftBox.onclick = () => showPage("cakePage");
+body{
+font-family:'Poppins',sans-serif;
+overflow:hidden;
+background:linear-gradient(135deg,#ff9ecf,#ffc3e6,#ffe8f4);
+height:100vh;
+color:#fff;
 }
 
-if (blowBtn) {
-    blowBtn.onclick = () => {
-
-        document.querySelector(".flame").style.display = "none";
-
-        document.getElementById("wishText").innerHTML =
-        "🎉 Happy Birthday Priyu ❤️<br>May all your dreams come true.";
-
-        setTimeout(() => {
-
-            showPage("letterPage");
-
-            typeLetter();
-
-        },2000);
-
-    }
+.page{
+position:absolute;
+width:100%;
+height:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+opacity:0;
+visibility:hidden;
+transition:.8s;
+padding:20px;
 }
 
-const letter = `
-
-Meri Pyari Priyu ❤️
-
-Happy Birthday Meri Jaan...
-
-Jab tum meri life me aayi thi na,
-tab tum mujhe thodi si pagal,
-thodi shararti aur bilkul alag si lagi thi.
-
-Mujhe bilkul bhi nahi laga tha
-ki ek din tum meri duniya,
-mera sukoon aur mera poora jahan ban jaogi.
-
-Aaj meri har dua me tum ho.
-
-Tumhari smile meri sabse favourite cheez hai.
-
-Main Allah se hamesha dua karta hoon
-ki tum hamesha khush raho,
-har sapna poora ho,
-aur tumhare chehre ki muskurahat kabhi na jaye.
-
-Agar kabhi maine tumhe hurt kiya ho,
-to mujhe maaf kar dena.
-
-Main perfect nahi hoon,
-lekin meri mohabbat tumhare liye
-hamesha sacchi rahegi.
-
-I Love You So Much Priyu ❤️
-
-Forever Yours
-
-Mohd Suhail ❤️
-
-`;
-
-let i = 0;
-
-function typeLetter(){
-
-const area = document.getElementById("letterText");
-
-area.innerHTML = "";
-
-let timer = setInterval(()=>{
-
-area.innerHTML += letter.charAt(i);
-
-i++;
-
-if(i >= letter.length){
-
-clearInterval(timer);
-
+.page.active{
+opacity:1;
+visibility:visible;
 }
 
-},35);
-
+.glass{
+width:90%;
+max-width:700px;
+padding:35px;
+border-radius:30px;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,.3);
+box-shadow:0 10px 40px rgba(0,0,0,.2);
+text-align:center;
 }
 
-if(nextBtn){
+.title{
+font-size:60
+    /* ---------- Balloons ---------- */
 
-nextBtn.onclick = ()=>{
-
-showPage("endPage");
-
+.balloons{
+position:fixed;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
 }
 
+.balloon{
+position:absolute;
+bottom:-150px;
+width:70px;
+height:90px;
+border-radius:50%;
+animation:balloonUp 14s linear infinite;
 }
 
-const hearts=document.querySelector(".hearts");
+.balloon::before{
+content:"";
+position:absolute;
+    /* ---------- Letter ---------- */
 
-if(hearts){
-
-setInterval(()=>{
-
-let h=document.createElement("span");
-
-h.innerHTML="❤️";
-
-h.style.left=Math.random()*100+"vw";
-
-h.style.fontSize=(20+Math.random()*20)+"px";
-
-hearts.appendChild(h);
-
-setTimeout(()=>{
-
-h.remove();
-
-},8000);
-
-},500);
-
+.book{
+width:90%;
+max-width:750px;
+height:75vh;
+background:#fff;
+color:#333;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 20px 50px rgba(0,0,0,.25);
 }
+
+.paper{
+height:100%;
+overflow
